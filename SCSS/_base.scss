@@ -1,0 +1,140 @@
+//@import "colors";
+//@import "variables";
+@import "base";
+//@import "utility";
+
+
+* {
+    box-sizing: border-box;
+} 
+
+body {
+    display: grid;
+    /* height: 100vh; */
+    /* width: auto; */
+    align-items: center;
+    justify-content: center;
+    /* grid-template-rows: 120px auto 64px; */
+    flex-wrap: wrap;
+    padding: 12px;
+}
+
+nav {
+    background: skyblue;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+a {
+    margin-left: 20px;
+}
+
+article {
+    display: flex;
+    background: cornflowerblue;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 700px) {
+    article {
+        background: springgreen;
+    }  
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+} */
+
+.img-fox {
+    width: 20%;
+}
+
+.img-brand {
+    width: 10%;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+
+.slider {
+background: white;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+height: 100px;
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 960px;
+}
+
+.slider::before, .slider::after {
+background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+content: "";
+height: 100px;
+position: absolute;
+width: 200px;
+z-index: 2;
+}
+
+.slider::after {
+right: 0;
+top: 0;
+-webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+}
+
+.slider::before {
+left: 0;
+top: 0;
+}
+
+.slider .slide-track {
+-webkit-animation: scroll 40s linear infinite;
+        animation: scroll 40s linear infinite;
+display: flex;
+width: calc(250px * 14);
+}
+
+.slider .slide {
+height: 100px;
+width: 250px;
+}
+
+footer {
+    background: teal;
+}
+
+/* img {
+    max-width: 15%;
+    height: auto;
+}
+*/
+
